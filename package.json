@@ -1,6 +1,6 @@
 {
   "name": "vue-render-if",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "Render Vue slots if properties are not undefined, null, empty strings, or a custom value. This helps avoid long and confusing v-ifs just to check if a property is valid.",
   "main": "src/RenderIf.vue",
   "directories": {
