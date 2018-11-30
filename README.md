@@ -1,6 +1,6 @@
 # vue-render-if
 
-The `vue-render-if` component makes checking against data in order to render slots, easy. This component helps clean up your Vue `template` by not writing `v-if`s everywhere and checking for multiple types of "falsy" values.
+The `vue-render-if` component makes checking against data in your template, easy. This component helps clean up your Vue `template` by not writing `v-if`s everywhere and checking for multiple types of "falsy" type values.
 
 __Before__
 
@@ -51,7 +51,7 @@ export default {
 </script>
 ```
 
-By default, `vue-render-if` will render a `div` and will chec if the values passed in the `defined` props array is either `undefined`, `null`, or an empty string `''`. You can however, define your own invalid values.
+By default, `vue-render-if` will render a `div` and will check if the values passed in the `defined` props array is either `undefined`, `null`, or an empty string `''`. You can however, define your own invalid values.
 
 __Note:__ You can also pass in a single value if you are checking against one data or state property.
 
@@ -86,6 +86,8 @@ This instance will...
 - Render if `value1` is not `'foo'`, `'bar'`, `undefined`, `null, or empty.
 - Render a `section` tag.
 
+__Note:__ If you defined values for the `not-valid` prop, you will need to add `undefined`, `null`, and `''` if you still want those to be falsy.
+
 ## Usage
 
 ```bash
@@ -103,6 +105,19 @@ import RenderIf from 'vue-render-if';
 Vue.component('render-if', RenderIf);
 ```
 
+### Using it in a Vue Component
+```html
+<script>
+import RenderIf from 'vue-render-if';
+
+export default {
+  components: {
+    RenderIf
+  }
+}
+</script>
+```
+
 ## Contributing
 1. Fork it!
 2. Create your feature branch: git checkout -b my-new-feature
@@ -112,7 +127,7 @@ Vue.component('render-if', RenderIf);
 
 ## Author
 
-__vue-render-if__ © daveberning, Released under the MIT License.
+__vue-render-if__ © Dave Berning, Released under the MIT License.
 
 [daveberning.io](https://daveberning.io) - [GitHub](https://github.com/daveberning) - [Twitter](https://twitter.com/daveberning)
 
