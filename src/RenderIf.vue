@@ -22,9 +22,6 @@ export default {
       let defined = this.convertStringToArray(this.defined);
       let notValid = this.convertStringToArray(this.notValid);
 
-      console.log(defined);
-      console.log(notValid);
-
       defined.forEach(item => {
         if (this.notValid === undefined) {
           if (item === null || item === undefined || item === '') rendered = false;
