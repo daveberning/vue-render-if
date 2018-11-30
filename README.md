@@ -1,6 +1,6 @@
 # vue-render-if
 
-The `vue-render-if` component makes checking against data in your template, easy. This component helps clean up your Vue `template` by not writing `v-if`s everywhere and checking for multiple types of "falsy" type values.
+The `vue-render-if` component makes checking against data in your template, easy. This component helps clean up your Vue `template` when checking for multiple "falsey" values of different types.
 
 __Before__
 
